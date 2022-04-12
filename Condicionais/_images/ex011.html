@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de nacionalidade</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body {
+          overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        background: hsl(184, 67%, 44%);
+        height: 50vh;
+      }
+
+      .wave {
+        position: absolute;
+        height: 250px;
+        width: 100%;
+        background: hsl(184, 67%, 44%);
+        bottom: 0;
+      }
+
+      .wave::before,
+      .wave::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+      }
+
+      .wave::before {
+        width: 55%;
+        height: 109%;
+        background-color: #fff;
+        right: -1.5%;
+        top: 60%;
+      }
+      .wave::after {
+        width: 55%;
+        height: 100%;
+        background-color: hsl(184, 67%, 44%);
+        left: -1.5%;
+        top: 40%;
+      }
+
+      .form {
+        border: 2px solid #6967a2;
+        border-radius: 5px;
+        width: 400px;
+        height: 500px;
+        background-color: #fff;
+        padding: 25px;
+        position: fixed;
+        text-align: center;
+        margin-top: 25px;
+        margin-left: 450px;
+        box-shadow: 20px 20px #9e9ad9;
+      }
+
+      h1 {
+        font-size: 20pt;
+        color: #00a9bd;
+        margin-top: 25px;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+
+      input {
+        padding: 10px;
+        margin-top: 20px;
+      }
+
+      input#txtc {
+        background-color: #e9fdff;
+        text-align: center;
+        color: #00a9bd;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .button {
+        background-color: #00a9bd;
+        color: #e9fdff;
+        border-radius: 5px;
+        text-decoration: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="wave"></div>
+      <section class="form">
+        <h1>Verificador de nacionalidades</h1>
+        <p>Insira o seu país de nascimento:</p>
+        <input type="text" name="txtc" id="txtc" />
+        <input
+          type="button"
+          class="button"
+          value="Verificar"
+          onclick="verificar()"
+        />
+        <div id="resultado"></div>
+        <script>
+          function verificar() {
+            var txtc = window.document.querySelector("input#txtc");
+            var resultado = window.document.querySelector("div#resultado");
+            var country = txtc.value;
+            if (country == "Brasil" || country == "brasil") {
+              resultado.innerHTML = `<p>Você é brasileiro.</p>`;
+            } else {
+              resultado.innerHTML = `<p>Você é estrangeiro.</p>`;
+            }
+            resultado.innerHTML += `<p>Você é do (a) país <strong>${country}</strong>.</p>`;
+          }
+        </script>
+      </section>
+    </section>
+  </body>
+</html>
