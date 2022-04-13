@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;600;700&display=swap");
+
+body {
+  background: rgb(224, 224, 224);
+  font-family: "Zilla Slab", serif;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header {
+  border: 1px solid black;
+  border-radius: 15px;
+  background: black;
+  color: rgb(224, 224, 224);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 20pt;
+  font-weight: 600;
+  line-height: 0.5;
+  color: black;
+  text-shadow: 1px 2px 0px gray;
+}
+
+section {
+  height: 300px;
+  padding: 30px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-image: url("_images/paper-texture.jpg");
+  background-attachment: scroll;
+}
+
+footer {
+  text-decoration: none;
+  color: black;
+}
