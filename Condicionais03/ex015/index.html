@@ -13,8 +13,23 @@
     </header>
     <section>
       <h2></h2>
-      <div></div>
-      <div id="res"></div>
+      <div>
+        <p>Ano de nascimento:
+          <input type="number" name="txtano" id="txtano" min="1940" max="2022">
+        </p>
+        <p>Sexo:
+          <input type="radio" name="radsex" id="mas" checked>
+          <label for="mas">Masculino</label>
+          <input type="radio" name="radsex" id="fem">
+          <label for="fem">Feminino</label>
+        </p>
+        <p>
+          <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+      </div>
+      <div id="res">
+        <h2>Resultado aqui</h2>
+      </div>
     </section>
     <footer>
       <p></p>
